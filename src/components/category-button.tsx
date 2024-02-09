@@ -3,18 +3,6 @@ import { clsx } from "clsx"
  
 //pressable = tmb é um componente pra toque só que sem animação 
 
-
-
-
-
-
-
-
-
-
-
-
-
 interface CategoryProps extends PressableProps{
     title: string;
     isSelected?: boolean;
@@ -23,7 +11,7 @@ interface CategoryProps extends PressableProps{
 export function CategoryButton({ title, isSelected, ...rest }: CategoryProps){
     return(
         <Pressable 
-            className={clsx("bg-slate-800 px-4 justify-center rounded-md h-10", 
+            className={clsx("bg-slate-800 px-4 justify-center rounded-md h-10 border-2 border-transparent", 
             isSelected && "border-2 border-lime-300")     
         }
             {...rest}
